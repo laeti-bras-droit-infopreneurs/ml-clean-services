@@ -1,0 +1,47 @@
+<header class="site-header">
+  <div class="conteneur header-inner">
+    <a class="logo" href="{{ '/' | relative_url }}">
+      <!-- À REMPLACER : logo hexagonal (assets/img/logo.png) dès qu'il est extrait de la plaquette -->
+      <span class="logo-nom">ML Clean <strong>Services</strong></span>
+      <span class="logo-slogan">Nettoyer • Vider • Redonner</span>
+    </a>
+
+    <button class="burger" aria-expanded="false" aria-controls="nav-principale" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-principale" id="nav-principale" aria-label="Navigation principale">
+      <ul>
+        {% for item in site.data.navigation.principale %}
+          {% if item.actif == false %}{% continue %}{% endif %}
+
+          {% if item.type == "mega" %}
+            <li class="a-sous-menu">
+              <button class="nav-lien nav-declencheur" aria-expanded="false">{{ item.label }} <span class="chevron" aria-hidden="true">▾</span></button>
+              {% include mega-menu.html %}
+            </li>
+
+          {% elsif item.type == "zones" %}
+            {% if site.zones.size > 0 %}
+            <li class="a-sous-menu">
+              <button class="nav-lien nav-declencheur" aria-expanded="false">{{ item.label }} <span class="chevron" aria-hidden="true">▾</span></button>
+              <div class="sous-menu">
+                <ul>
+                  {% for zone in site.zones %}
+                  <li><a href="{{ zone.url | relative_url }}">{{ zone.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </li>
+            {% endif %}
+
+          {% else %}
+            <li>
+              <a class="nav-lien {% if item.cta %}nav-cta{% endif %}" href="{{ item.url | relative_url }}">{{ item.label }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

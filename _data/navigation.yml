@@ -1,0 +1,30 @@
+# ── Navigation principale ──
+# `actif: false` = emplacement réservé pour la phase 2, masqué pour l'instant.
+
+principale:
+  - label: Nos prestations
+    type: mega # méga-menu : pôles + situations, générés automatiquement
+  - label: Qui sommes-nous
+    url: /qui-sommes-nous/
+  - label: Espace professionnels
+    url: /professionnels/
+  - label: Zones d'intervention
+    type: zones # activé automatiquement dès qu'une page existe dans _zones/
+  - label: Ressources
+    url: /ressources/
+    actif: false # phase 2 : blog / conseils
+  - label: Contact & devis
+    url: /contact/
+    cta: true
+
+pied_de_page:
+  - label: Qui sommes-nous
+    url: /qui-sommes-nous/
+  - label: Espace professionnels
+    url: /professionnels/
+  - label: Contact & devis
+    url: /contact/
+  - label: Mentions légales
+    url: /mentions-legales/
+  # - label: Politique de confidentialité   # phase 2 : décommenter quand le texte RGPD sera inséré
+  #   url: /confidentialite/

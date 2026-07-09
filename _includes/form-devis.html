@@ -1,0 +1,69 @@
+{%- comment -%}
+Formulaire de contact / devis — envoi via Formspree (site statique, pas de serveur).
+Usage : {% include form-devis.html origine="contact" %}
+Le champ caché « origine » permet de savoir de quelle page vient la demande.
+{%- endcomment -%}
+<form class="form-devis" action="{{ site.data.contact.formulaire_endpoint }}" method="POST">
+  <input type="hidden" name="origine" value="{{ include.origine | default: 'site' }}">
+  <input type="hidden" name="_subject" value="Nouvelle demande de devis — mlcleanservices">
+  {%- comment -%} Piège anti-spam Formspree : champ invisible, les robots le remplissent {%- endcomment -%}
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+  <div class="form-ligne">
+    <div class="form-champ">
+      <label for="f-nom">Votre nom *</label>
+      <input type="text" id="f-nom" name="nom" required autocomplete="name">
+    </div>
+    <div class="form-champ">
+      <label for="f-tel">Téléphone *</label>
+      <input type="tel" id="f-tel" name="telephone" required autocomplete="tel">
+    </div>
+  </div>
+
+  <div class="form-ligne">
+    <div class="form-champ">
+      <label for="f-email">Email</label>
+      <input type="email" id="f-email" name="email" autocomplete="email">
+    </div>
+    <div class="form-champ">
+      <label for="f-commune">Commune du logement concerné *</label>
+      <input type="text" id="f-commune" name="commune" required placeholder="Ex. : Sarlat-la-Canéda">
+    </div>
+  </div>
+
+  <div class="form-ligne">
+    <div class="form-champ">
+      <label for="f-profil">Vous êtes *</label>
+      <select id="f-profil" name="profil" required>
+        <option value="">— Choisir —</option>
+        <option>Particulier / famille</option>
+        <option>Travailleur social / CCAS</option>
+        <option>Tutelle / curatelle</option>
+        <option>Établissement (EHPAD, hôpital…)</option>
+        <option>Professionnel de l'immobilier</option>
+        <option>Autre</option>
+      </select>
+    </div>
+    <div class="form-champ">
+      <label for="f-besoin">Votre besoin *</label>
+      <select id="f-besoin" name="besoin" required>
+        <option value="">— Choisir —</option>
+        <option>Débarras / vidage de logement</option>
+        <option>Nettoyage / désinfection</option>
+        <option>Débarras + nettoyage</option>
+        <option>Accompagnement / coordination</option>
+        <option>Je ne sais pas encore</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-champ">
+    <label for="f-message">Décrivez la situation en quelques mots</label>
+    <textarea id="f-message" name="message" rows="5" placeholder="Type de logement, contexte, délais souhaités… Vos informations restent confidentielles."></textarea>
+  </div>
+
+  <p class="form-rgpd">Les informations transmises servent uniquement à traiter votre demande.
+  Elles ne sont jamais partagées ni utilisées à des fins commerciales.</p>
+
+  <button type="submit" class="bouton bouton-plein">Envoyer ma demande</button>
+</form>

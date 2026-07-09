@@ -1,0 +1,28 @@
+{%- comment -%}
+Bloc « situations que nous traitons » : maillage interne automatique.
+Usage : {% include situations-liees.html pole=page.slug exclure=page.url %}
+Sans paramètre `pole`, affiche toutes les situations.
+{%- endcomment -%}
+{% if include.pole %}
+  {% assign liste = site.situations | where: "pole", include.pole %}
+{% else %}
+  {% assign liste = site.situations %}
+{% endif %}
+{% assign exclure = include.exclure | default: "aucune" %}
+{% assign visibles = liste | where_exp: "s", "s.url != exclure" %}
+{% if visibles.size > 0 %}
+<section class="situations-liees">
+  <div class="conteneur">
+    <h2>{{ include.titre | default: "Les situations que nous prenons en charge" }}</h2>
+    <div class="grille-situations">
+      {% for s in visibles %}
+      <a class="carte-situation" href="{{ s.url | relative_url }}">
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.accroche }}</p>
+        <span class="lien-fleche">Lire la suite</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
