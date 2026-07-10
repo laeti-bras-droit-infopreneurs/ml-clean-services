@@ -12,7 +12,6 @@ principale:
     type: zones # activé automatiquement dès qu'une page existe dans _zones/
   - label: Ressources
     url: /ressources/
-    actif: false # phase 2 : blog / conseils
   - label: Contact & devis
     url: /contact/
     cta: true
@@ -22,6 +21,10 @@ pied_de_page:
     url: /qui-sommes-nous/
   - label: Espace professionnels
     url: /professionnels/
+  - label: Ressources & conseils
+    url: /ressources/
+  - label: Questions fréquentes
+    url: /faq/
   - label: Contact & devis
     url: /contact/
   - label: Mentions légales

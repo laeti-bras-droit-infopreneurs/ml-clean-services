@@ -27,9 +27,12 @@ collections:
   situations: # une page par situation traitée (Diogène, insalubrité…)
     output: true
     permalink: /situations/:name/
-  zones: # phase 2 : une page par zone d'intervention
+  zones: # une page par zone d'intervention
     output: true
     permalink: /zones/:name/
+  ressources: # articles conseils (hub : /ressources/)
+    output: true
+    permalink: /ressources/:name/
 
 defaults:
   - scope:
@@ -44,6 +47,10 @@ defaults:
       type: zones
     values:
       layout: zone
+  - scope:
+      type: ressources
+    values:
+      layout: page
   - scope:
       path: ""
     values:
