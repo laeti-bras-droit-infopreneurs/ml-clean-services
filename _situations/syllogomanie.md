@@ -1,6 +1,7 @@
 ---
 title: "Syllogomanie (accumulation compulsive)"
 pole: nettoyage-desinfection
+image: /assets/img/syllogomanie.jpg
 accroche: >-
   Désencombrer un logement envahi par l'accumulation, sans brusquer la
   personne, et l'aider à retrouver un espace de vie apaisé.
