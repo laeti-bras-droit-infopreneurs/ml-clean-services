@@ -12,9 +12,8 @@ timezone: Europe/Paris
 
 # URL de démonstration (GitHub Pages). Le jour du passage au domaine
 # personnalisé du client : url = https://www.LEDOMAINE.fr et baseurl = ""
-url: "https://laeti-bras-droit-infopreneurs.github.io"
-baseurl: "/ml-clean-services"
-
+url: "https://www.lapepita.fr"
+baseurl: ""
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
