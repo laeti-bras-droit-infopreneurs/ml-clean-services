@@ -15,25 +15,32 @@
         {% for item in site.data.navigation.principale %}
           {% if item.actif == false %}{% continue %}{% endif %}
 
-          {% if item.type == "mega" %}
-            <li class="a-sous-menu">
-              <button class="nav-lien nav-declencheur" aria-expanded="false">{{ item.label }} <span class="chevron" aria-hidden="true">▾</span></button>
-              {% include mega-menu.html %}
-            </li>
-
-          {% elsif item.type == "zones" %}
-            {% if site.zones.size > 0 %}
+          {% if item.type == "groupe" %}
             <li class="a-sous-menu">
               <button class="nav-lien nav-declencheur" aria-expanded="false">{{ item.label }} <span class="chevron" aria-hidden="true">▾</span></button>
               <div class="sous-menu">
                 <ul>
-                  {% for zone in site.zones %}
-                  <li><a href="{{ zone.url | relative_url }}">{{ zone.title }}</a></li>
+                  {% for lien in item.liens %}
+                  <li><a href="{{ lien.url | relative_url }}">{{ lien.label }}</a></li>
                   {% endfor %}
                 </ul>
               </div>
             </li>
-            {% endif %}
+
+          {% elsif item.type == "pole" %}
+            {% assign p = site.prestations | where: "slug", item.pole | first %}
+            <li class="a-sous-menu">
+              <button class="nav-lien nav-declencheur" aria-expanded="false">{{ item.label }} <span class="chevron" aria-hidden="true">▾</span></button>
+              <div class="sous-menu">
+                <ul>
+                  {% if p %}<li><a class="sous-menu-titre" href="{{ p.url | relative_url }}">Vue d'ensemble</a></li>{% endif %}
+                  {% assign enfants = site.situations | where: "pole", item.pole %}
+                  {% for s in enfants %}
+                  <li><a href="{{ s.url | relative_url }}">{{ s.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </li>
 
           {% else %}
             <li>

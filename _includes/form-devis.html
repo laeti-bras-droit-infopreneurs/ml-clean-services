@@ -1,12 +1,16 @@
 {%- comment -%}
-Formulaire de contact / devis — envoi via Formspree (site statique, pas de serveur).
+Formulaire de contact / devis — envoi par email via Formspree (site statique).
+Une fois l'endpoint renseigné dans _data/contact.yml, chaque soumission arrive
+directement dans la boîte mail de l'entreprise (celle du compte Formspree).
+- `email` du demandeur = adresse de réponse (répondre au mail = répondre au client)
+- `_next`   = page de remerciement affichée après l'envoi
+- `_gotcha` = piège anti-spam (invisible)
 Usage : {% include form-devis.html origine="contact" %}
-Le champ caché « origine » permet de savoir de quelle page vient la demande.
 {%- endcomment -%}
 <form class="form-devis" action="{{ site.data.contact.formulaire_endpoint }}" method="POST">
   <input type="hidden" name="origine" value="{{ include.origine | default: 'site' }}">
-  <input type="hidden" name="_subject" value="Nouvelle demande de devis — mlcleanservices">
-  {%- comment -%} Piège anti-spam Formspree : champ invisible, les robots le remplissent {%- endcomment -%}
+  <input type="hidden" name="_subject" value="Nouvelle demande de devis — ML Clean Services">
+  <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/merci/">
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
   <div class="form-ligne">
@@ -22,8 +26,8 @@ Le champ caché « origine » permet de savoir de quelle page vient la demande.
 
   <div class="form-ligne">
     <div class="form-champ">
-      <label for="f-email">Email</label>
-      <input type="email" id="f-email" name="email" autocomplete="email">
+      <label for="f-email">Email *</label>
+      <input type="email" id="f-email" name="email" required autocomplete="email">
     </div>
     <div class="form-champ">
       <label for="f-commune">Commune du logement concerné *</label>

@@ -10,6 +10,9 @@ layout: default
       {% if page.accroche %}<p class="sous-titre">{{ page.accroche }}</p>{% endif %}
     </div>
   </header>
+  <div class="conteneur">
+    {% include visuel.html image=page.image theme="zone" titre=page.title classe="page-media ratio-21-9" %}
+  </div>
   <div class="conteneur contenu-page">
     {{ content }}
   </div>

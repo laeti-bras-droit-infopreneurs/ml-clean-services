@@ -1,17 +1,31 @@
 # ── Navigation principale ──
-# `actif: false` = emplacement réservé pour la phase 2, masqué pour l'instant.
+# `type: pole`   → menu déroulant d'un pôle (page pilier + ses situations, auto)
+# `type: groupe` → menu déroulant de liens fixes (item.liens)
+# `actif: false` → emplacement réservé, masqué pour l'instant.
 
 principale:
-  - label: Nos prestations
-    type: mega # méga-menu : pôles + situations, générés automatiquement
-  - label: Qui sommes-nous
-    url: /qui-sommes-nous/
-  - label: Espace professionnels
-    url: /professionnels/
-  - label: Zones d'intervention
-    type: zones # activé automatiquement dès qu'une page existe dans _zones/
-  - label: Ressources
-    url: /ressources/
+  - label: L'entreprise
+    type: groupe
+    liens:
+      - label: Qui sommes-nous
+        url: /qui-sommes-nous/
+      - label: Espace professionnels
+        url: /professionnels/
+      - label: Zones d'intervention
+        url: /zones/
+      - label: Ressources & conseils
+        url: /ressources/
+      - label: Questions fréquentes
+        url: /faq/
+  - label: Débarras & vidage
+    type: pole
+    pole: debarras-vidage
+  - label: Nettoyage & désinfection
+    type: pole
+    pole: nettoyage-desinfection
+  - label: Accompagnement
+    type: pole
+    pole: accompagnement
   - label: Contact & devis
     url: /contact/
     cta: true
@@ -21,6 +35,8 @@ pied_de_page:
     url: /qui-sommes-nous/
   - label: Espace professionnels
     url: /professionnels/
+  - label: Zones d'intervention
+    url: /zones/
   - label: Ressources & conseils
     url: /ressources/
   - label: Questions fréquentes

@@ -1,5 +1,5 @@
 {%- comment -%}
-Bloc « situations que nous traitons » : maillage interne automatique.
+Bloc « situations que nous traitons » : maillage interne automatique, cartes illustrées.
 Usage : {% include situations-liees.html pole=page.slug exclure=page.url %}
 Sans paramètre `pole`, affiche toutes les situations.
 {%- endcomment -%}
@@ -17,9 +17,12 @@ Sans paramètre `pole`, affiche toutes les situations.
     <div class="grille-situations">
       {% for s in visibles %}
       <a class="carte-situation" href="{{ s.url | relative_url }}">
-        <h3>{{ s.title }}</h3>
-        <p>{{ s.accroche }}</p>
-        <span class="lien-fleche">Lire la suite</span>
+        {% include visuel.html image=s.image theme=s.pole titre=s.title classe="ratio-16-10" %}
+        <div class="carte-corps">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.accroche }}</p>
+          <span class="lien-fleche">Lire la suite</span>
+        </div>
       </a>
       {% endfor %}
     </div>
