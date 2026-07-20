@@ -1,0 +1,24 @@
+# ─────────────────────────────────────────────────────────────
+# Fichiers volontairement NON publiés sur GitHub.
+# Le dépôt étant public, tout ce qui est listé ici reste privé,
+# sur l'ordinateur uniquement.
+# ─────────────────────────────────────────────────────────────
+
+# Documents commerciaux et de travail (devis, présentations…)
+/Presentation-*.pdf
+/DEVIS-*.pdf
+/*.docx
+/*.xlsx
+/brouillons/
+
+# Fichiers générés automatiquement par Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+vendor/
+
+# Fichiers système
+Thumbs.db
+.DS_Store
+desktop.ini
