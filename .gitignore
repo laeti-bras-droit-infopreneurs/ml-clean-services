@@ -4,9 +4,10 @@
 # sur l'ordinateur uniquement.
 # ─────────────────────────────────────────────────────────────
 
-# Documents commerciaux et de travail (devis, présentations…)
-/Presentation-*.pdf
-/DEVIS-*.pdf
+# Documents commerciaux et de travail (devis, présentations, fiches client…)
+# Tous les PDF déposés à la racine du projet restent privés.
+# Un PDF destiné au site (plaquette à télécharger…) se dépose dans assets/.
+/*.pdf
 /*.docx
 /*.xlsx
 /brouillons/
