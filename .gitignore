@@ -8,6 +8,11 @@
 # Tous les PDF déposés à la racine du projet restent privés.
 # Un PDF destiné au site (plaquette à télécharger…) se dépose dans assets/.
 /*.pdf
+
+# Exports de supports imprimés (plaquettes, flyers) à la racine — privés.
+# Les images du site vivent dans assets/img/ et restent publiées normalement.
+/Plaquette-*.png
+/Flyer-*.png
 /*.docx
 /*.xlsx
 /brouillons/
