@@ -116,11 +116,11 @@
     padding:18px; font-size:.76rem; color:#8397a8; text-align:center;
   }
 
-  /* Apparition douce */
-  @keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:none;}}
+  /* Apparition douce — le contenu reste visible même si l'animation ne se joue pas */
+  @keyframes rise{from{transform:translateY(16px);} to{transform:none;}}
   .anim{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
-  .d1{animation-delay:.05s;} .d2{animation-delay:.15s;} .d3{animation-delay:.28s;}
-  .d4{animation-delay:.42s;} .d5{animation-delay:.55s;}
+  .d1{animation-delay:.03s;} .d2{animation-delay:.12s;} .d3{animation-delay:.24s;}
+  .d4{animation-delay:.36s;} .d5{animation-delay:.48s;}
   @media (prefers-reduced-motion:reduce){ .anim{animation:none;} }
 </style>
 </head>
