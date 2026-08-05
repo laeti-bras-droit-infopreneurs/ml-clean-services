@@ -1,49 +1,177 @@
----
-layout: home
-title: "Débarras et nettoyage de logements en Périgord Noir"
-description: >-
-  Débarras, nettoyage et désinfection de logements (syndrome de Diogène,
-  insalubrité, après décès) à Sarlat et en Périgord Noir. Entreprise sociale
-  et solidaire : devis gratuit sous 72 h, intervention sous 7 jours.
-hero_texte: >-
-  Débarras, nettoyage, désinfection et accompagnement en Périgord Noir.
-  Un service sur-mesure de proximité, pour permettre à chacun de se
-  réapproprier son histoire et son espace de vie — dans le respect
-  et la dignité.
-faq:
-  - question: "Dans quel secteur intervenez-vous ?"
-    reponse: >-
-      Nous intervenons à Sarlat-la-Canéda et dans les alentours, dans un rayon
-      d'environ une heure. La visite d'évaluation sur place est gratuite dans
-      toute notre zone d'intervention.
-  - question: "Combien coûte une intervention ?"
-    reponse: >-
-      Chaque situation est différente : le prix dépend du volume à débarrasser,
-      de l'état du logement et des prestations nécessaires. C'est pourquoi nous
-      commençons toujours par une visite gratuite sur place, suivie d'un devis
-      détaillé sous 72 h, sans engagement. La facturation à un tiers (tutelle,
-      famille, organisme) est possible.
-  - question: "Sous quel délai pouvez-vous intervenir ?"
-    reponse: >-
-      Après acceptation du devis, nous intervenons généralement sous 7 jours.
-      Pour les situations qui le nécessitent, parlez-nous de vos contraintes de
-      délai dès le premier contact : nous nous adaptons chaque fois que possible.
-  - question: "L'intervention est-elle discrète et confidentielle ?"
-    reponse: >-
-      Oui. La discrétion fait partie de nos engagements : nous intervenons avec
-      respect pour les lieux, les personnes et le voisinage, et les informations
-      qui nous sont confiées restent strictement confidentielles.
-  - question: "Travaillez-vous avec les CCAS et les services sociaux ?"
-    reponse: >-
-      Oui, c'est même au cœur de notre démarche. Nous travaillons en coordination
-      avec les CCAS, les travailleurs sociaux, les tutelles et curatelles et les
-      associations du territoire. Un espace dédié aux professionnels présente
-      notre fonctionnement : devis sous 72 h, intervention sous 7 jours,
-      interlocuteur unique.
-  - question: "Que deviennent les objets et meubles débarrassés ?"
-    reponse: >-
-      Nous trions systématiquement : les objets en bon état partent vers les
-      filières locales de don et de réemploi, le reste est orienté vers le
-      recyclage ou la déchetterie. Les documents importants et objets de valeur
-      sont mis de côté et remis à la personne ou à sa famille.
----
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ML Clean Services — Débarras, nettoyage et accompagnement en Périgord Noir</title>
+<meta name="description" content="ML Clean Services : débarras, nettoyage, désinfection et accompagnement des logements en Périgord Noir. Entreprise sociale et solidaire à Sarlat et alentours. Notre site arrive bientôt.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="ML Clean Services — Périgord Noir">
+<meta property="og:description" content="Débarras, nettoyage, désinfection et accompagnement des logements. Entreprise sociale et solidaire à Sarlat et alentours.">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1c3a5e; --blue:#2e7fb5; --blue-2:#4f97c9;
+    --green:#6faf3f; --green-d:#5d9634;
+    --sky:#e8f2f8; --paper:#ffffff;
+    --ink:#2a3a48; --ink-soft:#5a6b7a; --trait:#d5e3ee;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;height:100%;}
+  body{
+    font-family:"Nunito Sans",system-ui,"Segoe UI",sans-serif;
+    color:var(--ink); line-height:1.6;
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #ffffff 0%, #eef6fb 55%, #e3eef7 100%);
+    -webkit-font-smoothing:antialiased;
+    display:flex; flex-direction:column; align-items:center;
+    min-height:100%; overflow-x:hidden;
+  }
+
+  /* Motifs hexagones discrets en fond */
+  .deco{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;}
+  .deco svg{position:absolute; opacity:.06;}
+  .hx1{top:-70px; left:-60px; width:280px; color:var(--blue);}
+  .hx2{bottom:-90px; right:-70px; width:340px; color:var(--green);}
+
+  main{
+    position:relative; z-index:1;
+    width:100%; max-width:640px; padding:44px 24px 30px;
+    text-align:center; flex:1;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+  }
+
+  .logo{width:172px; height:auto; filter:drop-shadow(0 8px 20px rgba(28,58,94,.14));}
+
+  .badge{
+    display:inline-flex; align-items:center; gap:8px;
+    margin-top:22px; padding:7px 16px; border-radius:999px;
+    background:#fff; border:1px solid var(--trait);
+    box-shadow:0 2px 10px rgba(28,58,94,.06);
+    font-size:.82rem; font-weight:700; letter-spacing:.04em; color:var(--blue);
+  }
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(111,175,63,.18);}
+
+  h1{
+    margin:20px 0 6px; color:var(--navy);
+    font-size:clamp(1.8rem,5.5vw,2.6rem); font-weight:800; letter-spacing:-.02em;
+    line-height:1.14; text-wrap:balance;
+  }
+  .slogan{
+    font-size:.86rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--green-d); margin:0 0 20px;
+  }
+  .intro{
+    font-size:1.06rem; color:var(--ink-soft); max-width:52ch; margin:0 auto 6px;
+  }
+
+  .quote{
+    font-family:"Caveat",cursive; color:var(--navy);
+    font-size:1.6rem; line-height:1.35; margin:26px auto 4px; max-width:26ch;
+    position:relative;
+  }
+  .quote::before{content:"“"; color:var(--green); font-size:1.2em; line-height:0; vertical-align:-.35em; margin-right:.04em;}
+  .quote::after{content:"”"; color:var(--green); font-size:1.2em; line-height:0; vertical-align:-.55em; margin-left:.02em;}
+
+  /* Carte contact */
+  .carte{
+    margin-top:30px; width:100%;
+    background:#fff; border:1px solid var(--trait); border-radius:18px;
+    box-shadow:0 12px 34px rgba(28,58,94,.10);
+    padding:24px 22px 22px;
+  }
+  .carte-titre{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin:0 0 14px;}
+  .actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    padding:12px 20px; border-radius:999px; text-decoration:none;
+    font-weight:800; font-size:.98rem; border:2px solid transparent; transition:.15s;
+  }
+  .btn svg{flex:none;}
+  .btn-tel{background:var(--green); color:#fff;}
+  .btn-tel:hover{background:var(--green-d);}
+  .btn-mail{background:#fff; color:var(--navy); border-color:var(--navy);}
+  .btn-mail:hover{background:var(--navy); color:#fff;}
+  .btn-mail:hover svg{stroke:#fff;}
+  .zone{
+    margin-top:16px; padding-top:14px; border-top:1px solid var(--trait);
+    font-size:.9rem; color:var(--ink-soft); display:inline-flex; align-items:center; gap:7px; justify-content:center;
+  }
+  .zone b{color:var(--navy);}
+
+  .puces{
+    margin:22px 0 0; padding:0; list-style:none;
+    display:flex; gap:8px 18px; flex-wrap:wrap; justify-content:center;
+    font-size:.82rem; color:var(--ink-soft);
+  }
+  .puces li{display:inline-flex; align-items:center; gap:6px;}
+  .puces svg{flex:none;}
+
+  footer{
+    position:relative; z-index:1;
+    padding:18px; font-size:.76rem; color:#8397a8; text-align:center;
+  }
+
+  /* Apparition douce */
+  @keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:none;}}
+  .anim{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
+  .d1{animation-delay:.05s;} .d2{animation-delay:.15s;} .d3{animation-delay:.28s;}
+  .d4{animation-delay:.42s;} .d5{animation-delay:.55s;}
+  @media (prefers-reduced-motion:reduce){ .anim{animation:none;} }
+</style>
+</head>
+<body>
+
+<div class="deco" aria-hidden="true">
+  <svg class="hx1" viewBox="0 0 100 100"><path d="M50 4 92 27v46L50 96 8 73V27z" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+  <svg class="hx2" viewBox="0 0 100 100"><path d="M50 4 92 27v46L50 96 8 73V27z" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+</div>
+
+<main>
+  <img class="logo anim d1" src="logo.png" alt="ML Clean Services" width="172" height="172">
+
+  <div class="badge anim d2"><span class="dot"></span> Notre nouveau site arrive bientôt</div>
+
+  <h1 class="anim d2">Nettoyer • Vider • Redonner</h1>
+  <p class="slogan anim d2">Débarras · Nettoyage · Accompagnement</p>
+
+  <p class="intro anim d3">
+    ML Clean Services remet en état les logements en difficulté, en Périgord Noir —
+    dans le respect et la dignité de chacun. Notre site est en cours de création.
+  </p>
+
+  <p class="quote anim d3">Redonner à chacun un espace de vie digne, et l'aider à se réapproprier son histoire.</p>
+
+  <div class="carte anim d4">
+    <p class="carte-titre">En attendant, parlons de votre projet</p>
+    <div class="actions">
+      <a class="btn btn-tel" href="tel:+33757188065">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        07 57 18 80 65
+      </a>
+      <a class="btn btn-mail" href="mailto:mlcleanservices24@gmail.com">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1c3a5e" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
+        Nous écrire
+      </a>
+    </div>
+    <div class="zone">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5d9634" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span><b>Sarlat et alentours</b> — Périgord Noir</span>
+    </div>
+  </div>
+
+  <ul class="puces anim d5">
+    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5d9634" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Entreprise sociale et solidaire</li>
+    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5d9634" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Devis gratuit sous 72 h</li>
+    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5d9634" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Équipe certifiée Certibiocide</li>
+  </ul>
+</main>
+
+<footer class="anim d5">© 2026 ML Clean Services — SAS · Périgord Noir</footer>
+
+</body>
+</html>
