@@ -1,9 +1,11 @@
 <header class="site-header">
   <div class="conteneur header-inner">
     <a class="logo" href="{{ '/' | relative_url }}">
-      <!-- À REMPLACER : logo hexagonal (assets/img/logo.png) dès qu'il est extrait de la plaquette -->
-      <span class="logo-nom">ML Clean <strong>Services</strong></span>
-      <span class="logo-slogan">Nettoyer • Vider • Redonner</span>
+      <img class="logo-img" src="{{ '/assets/img/logo-embleme.png' | relative_url }}" alt="" width="42" height="46">
+      <span class="logo-texte">
+        <span class="logo-nom">ML Clean <strong>Services</strong></span>
+        <span class="logo-slogan">Nettoyer • Vider • Redonner</span>
+      </span>
     </a>
 
     <button class="burger" aria-expanded="false" aria-controls="nav-principale" aria-label="Ouvrir le menu">

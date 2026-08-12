@@ -1,9 +1,9 @@
 # ── Coordonnées ML Clean Services ──
 # Un seul endroit à modifier : tout le site (header, footer, pages) lit ce fichier.
 
-telephone: "" # <!-- À REMPLACER : numéro ML Clean Services -->
-telephone_lien: "" # <!-- À REMPLACER : format international, ex. +33612345678 -->
-email: "" # <!-- À REMPLACER : email ML Clean Services -->
+telephone: "07 57 18 80 65"
+telephone_lien: "+33757188065"
+email: "mlcleanservices24@gmail.com"
 
 # Formulaire de devis — Formspree.
 # 1. Créer un compte sur formspree.io avec l'email de ML Clean Services

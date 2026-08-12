@@ -86,7 +86,9 @@ blockquote {
   position: sticky; top: 0; z-index: 50;
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 74px; }
-.logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1.2; }
+.logo { text-decoration: none; display: flex; align-items: center; gap: 0.7rem; line-height: 1.2; }
+.logo-img { width: 42px; height: auto; filter: drop-shadow(0 1px 4px rgba(0,0,0,0.25)); }
+.logo-texte { display: flex; flex-direction: column; }
 .logo-nom { font-size: 1.35rem; font-weight: 400; color: #fff; letter-spacing: 0.02em; }
 .logo-nom strong { font-weight: 800; color: #fff; }
 .logo-slogan { font-size: 0.72rem; color: var(--vert); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
