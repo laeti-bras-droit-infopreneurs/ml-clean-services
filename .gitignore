@@ -28,3 +28,6 @@ vendor/
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# Dossier des fichiers pour imprimeur (gabarits, PDF print)
+/PRINT/
